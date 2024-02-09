@@ -1,33 +1,35 @@
 import './App.css';
-import {useState} from 'react';
-import { addNumbers } from './Services/dataServices.js';
+import HomePageComponents from './components/HomePageComponents';
+import AddingPageComponents from './components/AddingPageComponents';
+import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
+import SayHelloPageComponents from './components/SayHelloPageComponents';
+import ComparePageComponents from './components/ComparePageComponents';
+import AskQuestionPageComponents from './components/AskQuestionPageComponents';
+import MadlibPageComponents from './components/MadlibPageComponents';
+import OddEvenPageComponents from './components/OddEvenPageComponents';
+import ReversedIntPageComponents from './components/ReversedIntPageComponents';
+import ReversedStringPageComponents from './components/ReversedStringPageComponents';
+import EightBallPageComponents from './components/EightBallPageComponents';
+import RestaurantPageComponents from './components/RestaurantPageComponents';
 
 function App() {
-
-  const [numOne, setNumOne] = useState('');
-  const [numTwo, setNumTwo] = useState('');
-  const [result, setResult] = useState('');
-
-  const getResult = async () => {
-    const response = await addNumbers(numOne, numTwo);
-    setResult(response)
-  }
-
   return (
-    <>
-    <div>
-      <input onChange={(e) => setNumOne(e.target.value)} ></input>
-    </div>
-    <div>
-      <input onChange={(e) => setNumTwo(e.target.value)} ></input>
-    </div>
-    <div>
-      <button  className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 mt-4 rounded" onClick={() => getResult()} >Get Results</button>
-    </div>
-    <div>
-      <p>{result}</p>
-    </div>
-    </>
+     <BrowserRouter>
+     <Routes>
+      <Route path='/' element={<HomePageComponents/>}/>
+      <Route path='AddingPage'element={<AddingPageComponents/>}/>
+      <Route path='SayHelloPage'element={<SayHelloPageComponents/>}/>
+      <Route path='ComparePage'element={<ComparePageComponents/>}/>
+      <Route path='AskingQuestionPage'element={<AskQuestionPageComponents/>}/>
+      <Route path='MadlibPage'element={<MadlibPageComponents/>}/>
+      <Route path='OddEvenPage'element={<OddEvenPageComponents/>}/>
+      <Route path='ReversedIntPage'element={<ReversedIntPageComponents/>}/>
+      <Route path='ReversedStringPage'element={<ReversedStringPageComponents/>}/>
+      <Route path='EightBallPage'element={<EightBallPageComponents/>}/>
+      <Route path='RestaurantPage'element={<RestaurantPageComponents/>}/>
+     </Routes>
+     </BrowserRouter>
+
   );
 }
 

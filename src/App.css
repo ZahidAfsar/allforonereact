@@ -36,3 +36,27 @@
     transform: rotate(360deg);
   }
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Modak;
+  src: url(../src/assets/Modak-Regular.ttf);
+}
+
+@font-face {
+  font-family: Unlock;
+  src: url(../src/assets/Unlock-Regular.ttf);
+}
+
+.HomeBG{
+  background-image: url(../src/assets/HomeBG.jpg);
+  height: 100%;
+  background-size: cover;
+}
+
+.height{
+  height: 1080px
+}
