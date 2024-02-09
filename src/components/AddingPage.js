@@ -1,14 +1,14 @@
-import './App.css';
+import React from 'react';
 import {useState} from 'react';
 import { addNumbers } from './Services/dataServices.js';
 
-function App() {
+export default function AddingPage() {
 
-  const [numOne, setNumOne] = useState('');
-  const [numTwo, setNumTwo] = useState('');
-  const [result, setResult] = useState('');
+    const [numOne, setNumOne] = useState('');
+    const [numTwo, setNumTwo] = useState('');
+    const [result, setResult] = useState('');
 
-  const getResult = async () => {
+    const getResult = async () => {
     const response = await addNumbers(numOne, numTwo);
     setResult(response)
   }
@@ -30,5 +30,3 @@ function App() {
     </>
   );
 }
-
-export default App;
