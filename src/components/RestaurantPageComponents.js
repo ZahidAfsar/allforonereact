@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { RestaurantPicker } from '../Services/dataServices.js';
 
 export default function RestaurantPageComponents() {
+
   return (
     <>
     <div className="hidden sm:block p-4">
@@ -15,6 +16,31 @@ export default function RestaurantPageComponents() {
         Home
       </button>
     </Link>
+  </div>
+
+  <h1 className="text-center font-Modak text-7xl text-custom-orange drop-shadow-[0_1.2px_1.2px_rgba(255,255,255,4)] pt-16">
+    Mini Challenge 10
+  </h1>
+  <h1 className="text-center font-Modak text-5xl text-custom-purple drop-shadow-[0_1.2px_1.2px_rgba(255,255,255,4)] pt-16">
+  </h1>
+  <div className="flex justify-center">
+    <div className="mt-16">
+      <input 
+        type="text"
+        placeholder="Choose between mexican, fastfood, or pizza"
+        className="bg-gray-200 border font-Unlock border-gray-300 text-gray-900 text-sm rounded-full block w-96 p-2.5"
+      />
+    </div>
+  </div>
+  <div className="flex justify-center">
+    <div className="flex mt-28">
+      <button 
+        type="button"
+        className="py-3.5 px-10 me-2 mb-2 text-md font-medium text-white focus:outline-none bg-custom-purple rounded-full border border-gray-200 hover:opacity-75 hover:text-white focus:z-10 focus:ring-4 focus:ring-gray-200 font-Unlock"
+      >
+        Submit
+      </button>
+    </div>
   </div>
 
   <div className="block sm:hidden">

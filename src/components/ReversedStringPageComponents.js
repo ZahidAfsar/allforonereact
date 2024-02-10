@@ -4,6 +4,15 @@ import { Link } from 'react-router-dom'
 import { StringReverse } from '../Services/dataServices.js';
 
 export default function ReversedStringPageComponents() {
+
+    const [wordOne, setwordOne] = useState('');
+    const [result, setResult] = useState('');
+
+    const getResult = async () => {
+        const response = await StringReverse(wordOne);
+        setResult(response)
+    }
+
   return (
     <>
     <div className="hidden sm:block p-4">
@@ -15,6 +24,35 @@ export default function ReversedStringPageComponents() {
         Home
       </button>
     </Link>
+  </div>
+
+  <h1 className="text-center font-Modak text-7xl text-custom-red drop-shadow-[0_1.2px_1.2px_rgba(255,255,255,4)] pt-16">
+    Mini Challenge 7
+  </h1>
+  <h1
+    id="SayHelloText"
+    className="text-center font-Modak text-5xl text-custom-purple drop-shadow-[0_1.2px_1.2px_rgba(255,255,255,4)] pt-16"
+  >
+    {result === "" ? "... reversed is ..." : result}
+  </h1>
+  <div className="flex justify-center">
+    <div className="mt-16">
+      <input onChange={(e) => setwordOne(e.target.value)}
+        type="text"
+        placeholder="Type your string...."
+        className="bg-gray-200 border font-Unlock border-gray-300 text-gray-900 text-sm rounded-full block w-96 p-2.5 "
+      />
+    </div>
+  </div>
+  <div className="flex justify-center">
+    <div className="flex mt-28">
+      <button onClick={() => getResult()}
+        type="button"
+        className="py-3.5 px-10 me-2 mb-2 text-md font-medium text-white focus:outline-none bg-custom-purple rounded-full border border-gray-200 hover:opacity-75 hover:text-white focus:z-10 focus:ring-4 focus:ring-gray-200  font-Unlock"
+      >
+        Submit
+      </button>
+    </div>
   </div>
 
   <div className="block sm:hidden">
