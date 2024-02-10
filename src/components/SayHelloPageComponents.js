@@ -15,7 +15,7 @@ export default function SayHelloPageComponents() {
 
 
     return (
-        <>
+        <div className='GameBg height'>
             <div className="hidden sm:block p-4">
                 <Link to={'/'} >
                     <button
@@ -64,7 +64,7 @@ export default function SayHelloPageComponents() {
                     </Link>
                 </div>
             </div>
-        </>
+        </div>
 
     )
 }

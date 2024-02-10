@@ -17,7 +17,7 @@ export default function AskQuestionPageComponents() {
 
 
   return (
-    <>
+    <div className='GameBg height'>
       <div className="hidden sm:block p-4">
       <Link  to={'/'} >
         <button
@@ -100,6 +100,6 @@ export default function AskQuestionPageComponents() {
         </Link>
       </div>
     </div>
-    </>
+    </div>
   )
 }

@@ -14,7 +14,7 @@ export default function ReversedIntPageComponents() {
     }
 
   return (
-    <>
+    <div className='GameBg height'>
     <div className="hidden sm:block p-4">
     <Link  to={'/'} >
       <button
@@ -66,6 +66,6 @@ export default function ReversedIntPageComponents() {
         </Link>
       </div>
     </div>
-  </>
+  </div>
   )
 }

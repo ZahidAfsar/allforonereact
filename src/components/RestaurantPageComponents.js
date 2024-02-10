@@ -14,7 +14,7 @@ export default function RestaurantPageComponents() {
     }
 
   return (
-    <>
+    <div className='GameBg height'>
     <div className="hidden sm:block p-4">
     <Link  to={'/'} >
       <button
@@ -64,6 +64,6 @@ export default function RestaurantPageComponents() {
         </Link>
       </div>
     </div>
-  </>
+  </div>
   )
 }

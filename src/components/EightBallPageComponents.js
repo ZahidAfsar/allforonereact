@@ -16,7 +16,7 @@ export default function EightBallPageComponents() {
 
 
   return (
-    <>
+    <div className='GameBg height'>
       <div className="hidden sm:block p-4">
       <Link  to={'/'} >
         <button
@@ -66,6 +66,6 @@ export default function EightBallPageComponents() {
         </Link>
       </div>
     </div>
-    </>
+    </div>
   )
 }

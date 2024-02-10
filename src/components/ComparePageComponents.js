@@ -16,7 +16,7 @@ export default function ComparePageComponents() {
   
 
   return (
-    <>
+    <div className='GameBg height'>
     <div className="hidden sm:block p-4">
     <Link  to={'/'} >
       <button
@@ -98,6 +98,6 @@ export default function ComparePageComponents() {
         </Link>
       </div>
     </div>
-  </>
+  </div>
   )
 }

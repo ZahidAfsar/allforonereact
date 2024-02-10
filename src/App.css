@@ -57,6 +57,11 @@
   background-size: cover;
 }
 
+.GameBg{
+  background-image: url(../src/assets/PlayBG.jpg);
+  height: 100%;
+}
+
 .height{
   height: 1080px
 }
