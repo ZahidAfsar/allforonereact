@@ -5,6 +5,14 @@ import { RestaurantPicker } from '../Services/dataServices.js';
 
 export default function RestaurantPageComponents() {
 
+    const [choice, setChoice] = useState('');
+    const [result, setResult] = useState('');
+
+    const getResult = async () => {
+        const response = await RestaurantPicker(choice);
+        setResult(response)
+    }
+
   return (
     <>
     <div className="hidden sm:block p-4">
@@ -22,10 +30,11 @@ export default function RestaurantPageComponents() {
     Mini Challenge 10
   </h1>
   <h1 className="text-center font-Modak text-5xl text-custom-purple drop-shadow-[0_1.2px_1.2px_rgba(255,255,255,4)] pt-16">
+    {result === "" ? "your restaurant is ..." : result}
   </h1>
   <div className="flex justify-center">
     <div className="mt-16">
-      <input 
+      <input onChange={(e) => setChoice(e.target.value)}
         type="text"
         placeholder="Choose between mexican, fastfood, or pizza"
         className="bg-gray-200 border font-Unlock border-gray-300 text-gray-900 text-sm rounded-full block w-96 p-2.5"
@@ -34,7 +43,7 @@ export default function RestaurantPageComponents() {
   </div>
   <div className="flex justify-center">
     <div className="flex mt-28">
-      <button 
+      <button  onClick={() => getResult()}
         type="button"
         className="py-3.5 px-10 me-2 mb-2 text-md font-medium text-white focus:outline-none bg-custom-purple rounded-full border border-gray-200 hover:opacity-75 hover:text-white focus:z-10 focus:ring-4 focus:ring-gray-200 font-Unlock"
       >

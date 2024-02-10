@@ -51,7 +51,7 @@ const Magic8ball = async (Question) => {
 
 const RestaurantPicker = async (choice) => {
     const promise = await fetch (`https://afsarzallforone.azurewebsites.net/Restaurant/fastfoodORpizzaORmexican/${choice}`)
-    const response = await response.text()
+    const response = await promise.text()
     return response;    
 }
 
