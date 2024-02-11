@@ -47,7 +47,7 @@ export default function MadlibPageComponents() {
   >
   {result === "" ? "story ...." : result}
   </h1>
-  <div className="container-fluid hidden sm:block">
+  <div className="container-fluid hidden lg:block">
     <div className="flex justify-center">
       <div className="mt-16">
         <input onChange={(e) => setName(e.target.value)}
@@ -143,7 +143,7 @@ export default function MadlibPageComponents() {
       </div>
     </div>
   </div>
-  <div className="container block sm:hidden">
+  <div className="container block lg:hidden">
     <div className="flex justify-center">
       <div className="mt-4">
         <input
