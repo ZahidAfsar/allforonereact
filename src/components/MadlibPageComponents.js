@@ -41,12 +41,16 @@ export default function MadlibPageComponents() {
   <h1 className="text-center font-Modak text-7xl text-custom-green drop-shadow-[0_1.2px_1.2px_rgba(255,255,255,4)] pt-16">
     Mini Challenge 5
   </h1>
-  <h1
-    id="SayHelloText"
-    className="text-center font-Modak text-5xl text-custom-purple drop-shadow-[0_1.2px_1.2px_rgba(255,255,255,4)] pt-16"
-  >
+  <div className='overflow-y-auto h-62 hidden lg:block' >
+  <h1 className="text-center font-Modak text-5xl text-custom-purple drop-shadow-[0_1.2px_1.2px_rgba(255,255,255,4)] pt-16">
   {result === "" ? "story ...." : result}
   </h1>
+  </div>
+  <div className='overflow-y-auto h-32 block lg:hidden' >
+  <h1 className="text-center font-Modak text-5xl text-custom-purple drop-shadow-[0_1.2px_1.2px_rgba(255,255,255,4)] pt-16">
+  {result === "" ? "story ...." : result}
+  </h1>
+  </div>
   <div className="container-fluid hidden lg:block">
     <div className="flex justify-center">
       <div className="mt-16">
@@ -146,7 +150,7 @@ export default function MadlibPageComponents() {
   <div className="container block lg:hidden">
     <div className="flex justify-center">
       <div className="mt-4">
-        <input
+        <input onChange={(e) => setName(e.target.value)}
           type="text"
           placeholder="type a name...."
           id="nameSMALL"
@@ -156,7 +160,7 @@ export default function MadlibPageComponents() {
     </div>
     <div className="flex justify-center">
       <div className="mt-4">
-        <input
+        <input onChange={(e) => setUsername(e.target.value)}
           type="text"
           placeholder="type your name...."
           id="usernameSMALL"
@@ -166,7 +170,7 @@ export default function MadlibPageComponents() {
     </div>
     <div className="flex justify-center">
       <div className="mt-4">
-        <input
+        <input onChange={(e) => setVerb(e.target.value)}
           type="text"
           placeholder="type a verb...."
           id="verbSMALL"
@@ -176,7 +180,7 @@ export default function MadlibPageComponents() {
     </div>
     <div className="flex justify-center">
       <div className="mt-4">
-        <input
+        <input onChange={(e) => setnameTwo(e.target.value)}
           type="text"
           placeholder="type a name...."
           id="nameTwoSMALL"
@@ -186,7 +190,7 @@ export default function MadlibPageComponents() {
     </div>
     <div className="flex justify-center">
       <div className="mt-4">
-        <input
+        <input onChange={(e) => setNoun(e.target.value)}
           type="text"
           placeholder="type a noun...."
           id="nounSMALL"
@@ -196,7 +200,7 @@ export default function MadlibPageComponents() {
     </div>
     <div className="flex justify-center">
       <div className="mt-4">
-        <input
+        <input onChange={(e) => setnounTwo(e.target.value)}
           type="text"
           placeholder="type another noun...."
           id="nounTwoSMALL"
@@ -206,7 +210,7 @@ export default function MadlibPageComponents() {
     </div>
     <div className="flex justify-center">
       <div className="mt-4">
-        <input
+        <input onChange={(e) => setverbTwo(e.target.value)}
           type="text"
           placeholder="type a verb...."
           id="verbTwoSMALL"
@@ -216,7 +220,7 @@ export default function MadlibPageComponents() {
     </div>
     <div className="flex justify-center">
       <div className="mt-4">
-        <input
+        <input onChange={(e) => setnounThree(e.target.value)}
           type="text"
           placeholder="type a noun...."
           id="nounThreeSMALL"
@@ -226,7 +230,7 @@ export default function MadlibPageComponents() {
     </div>
     <div className="flex justify-center">
       <div className="mt-4">
-        <input
+        <input onChange={(e) => setnounFour(e.target.value)}
           type="text"
           placeholder="type a noun...."
           id="nounFourSMALL"
@@ -236,7 +240,7 @@ export default function MadlibPageComponents() {
     </div>
     <div className="flex justify-center">
       <div className="mt-4">
-        <input
+        <input onChange={(e) => setCreatureName(e.target.value)}
           type="text"
           placeholder="name a creature...."
           id="creatureNameSMALL"
@@ -246,7 +250,7 @@ export default function MadlibPageComponents() {
     </div>
     <div className="flex justify-center">
       <div className="mt-4">
-        <input
+        <input onChange={(e) => setWeaponName(e.target.value)}
           type="text"
           placeholder="name a weapon...."
           id="weaponNameSMALL"
@@ -256,7 +260,7 @@ export default function MadlibPageComponents() {
     </div>
     <div className="flex justify-center">
       <div className="flex mt-4 ml-2">
-        <button
+        <button onClick={() => getResult()}
           id="SubmitBtnSMALL"
           type="button"
           className="py-2.5 px-40 me-2 mb-2 text-md font-medium text-white focus:outline-none bg-custom-purple  rounded-full border border-gray-200 hover:opacity-75 hover:text-white focus:z-10 focus:ring-4 focus:ring-gray-200 :focus:ring-gray-700 :bg-gray-800 :text-gray-400 :border-gray-600 :hover:text-white :hover:bg-gray-700 font-Unlock"
