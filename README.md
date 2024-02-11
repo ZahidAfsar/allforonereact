@@ -1,3 +1,12 @@
+
+
+# Peer Reviewer: Caleb Sylvia
+# Peer Review: The site looks amazing and works as it should, completely functioning. Site is also responsive and it looks great for each screen size. There was only one flaw I saw and it was for the ask a question one where is asks you what time you woke up, the response is wrapped in [] brackets. Other than that everything looks great, amazing job!
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
